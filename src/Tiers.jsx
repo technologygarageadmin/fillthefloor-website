@@ -81,16 +81,18 @@ export default function Tiers({ mail, children }) {
           {tiers.map((t) => (
             <article className={`tier ${t.tone}`} key={t.name} tabIndex={0}>
               <span className="t-ico"><Icon name={t.icon} size={30} /></span>
-              <p className="tier-name">{t.name}</p>
-              <h3>{t.title}</h3>
-              {t.price && <p className="price">{t.price}</p>}
+              <div className="t-head">
+                <p className="tier-name">{t.name}</p>
+                <h3>{t.title}</h3>
+                {t.price && <p className="price">{t.price}</p>}
+              </div>
               <p className="blurb">{t.blurb}</p>
               <ul>
                 {t.items.map((i) => (
                   <li key={i}><span className="tick"><Icon name="check" size={12} /></span>{i}</li>
                 ))}
               </ul>
-              {t.not && <p className="not"><strong>Not included:</strong> {t.not}</p>}
+              <p className="not">{t.not && <><strong>Not included:</strong> {t.not}</>}</p>
               <a className="t-btn" href={mail}>
                 {t.price ? 'Talk to us' : 'Get started'} <Icon name="arrow" size={16} />
               </a>

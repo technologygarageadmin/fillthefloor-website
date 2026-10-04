@@ -53,7 +53,7 @@
 
 .cmp-cell { display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 10px 16px; border-radius: 14px; background: var(--soft); font-size: .85rem; color: var(--ink); transition: background-color .25s; }
 .cmp-col.hl .cmp-cell { background: #fdeaf2; }
-.cmp-cell.label { flex-direction: row; align-items: center; gap: 12px; background: transparent; font-weight: 700; color: var(--navy); padding-left: 0; }
+.cmp-cell.label { flex-direction: row; justify-content: flex-start; align-items: center; gap: 12px; background: transparent; font-weight: 700; color: var(--navy); padding-left: 0; }
 .mini { flex: none; width: 34px; height: 34px; border-radius: 11px; display: grid; place-items: center; }
 .mini.pink { background: #fde4ee; color: var(--pink); }
 .mini.violet { background: #ece7fd; color: var(--purple); }
