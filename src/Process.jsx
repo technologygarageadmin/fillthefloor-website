@@ -31,7 +31,7 @@ function VizScan() {
       <div className="scan-core">
         <svg className="ring" viewBox="0 0 100 100" aria-hidden="true">
           <circle cx="50" cy="50" r="44" fill="none" stroke="url(#sg)" strokeWidth="3" strokeDasharray="70 24 14 24" strokeLinecap="round" />
-          <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#7c3aed" /><stop offset="1" stopColor="#f97316" /></linearGradient></defs>
+          <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#6d4aff" /><stop offset="1" stopColor="#12b5cb" /></linearGradient></defs>
         </svg>
         <span className="scan-ico"><Icon name="search" size={26} /></span>
       </div>
@@ -58,7 +58,7 @@ function VizCalendar() {
 }
 
 function VizAudience() {
-  const clusters = [[24, 36, '#7c3aed'], [60, 24, '#ec2f7a'], [52, 62, '#f97316']]
+  const clusters = [[24, 36, '#7c3aed'], [60, 24, '#3b6bff'], [52, 62, '#12b5cb']]
   const dots = clusters.flatMap(([cx, cy, c], k) =>
     [[0, 0], [7, -5], [-6, 6], [6, 7], [-8, -4], [0, -10]].map(([dx, dy], j) => ({ x: cx + dx, y: cy + dy, c, k, j })))
   return (

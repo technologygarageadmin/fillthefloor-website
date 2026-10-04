@@ -2,12 +2,12 @@ import { Icon } from './Hero.jsx'
 import './services.css'
 
 const pillars = [
-  ['browser', 'pink', 'Website & hosting', 'We migrate your site onto a stack we maintain and host it free on Firebase. Your old hosting bill stops.'],
-  ['search', 'violet', 'SEO / AEO', 'Automated scans and plain-English reports, with fixes applied by our web team from Tier 2.'],
-  ['users', 'orange', 'Social content', 'Posters, posts and reels planned on a calendar you approve before anything goes live.'],
+  ['users', 'orange', 'Creative content', 'Posters, posts and reels planned on a calendar you approve before anything goes live.'],
   ['megaphone', 'blue', 'Paid advertising', 'Meta, Google, TikTok and AI/ChatGPT placements, paced weekly at your tier’s rate.'],
+  ['search', 'violet', 'SEO / AEO', 'Automated scans and plain-English reports, with fixes applied by our web team from Tier 2.'],
   ['pin', 'green', 'Google Business Profile', 'Claimed, optimised and managed: reviews, Q&A, posts and local rank tracking.'],
-  ['bars', 'violet', 'Market analytics', 'Competitor analysis, POS sales data and audience modelling to size the market before spending.'],
+  ['bars', 'pink', 'Market analytics', 'Competitor analysis, POS sales data and audience modelling to size the market before spending.'],
+  ['browser', 'violet', 'Website & hosting', 'We migrate your site onto a stack we maintain and host it free on Firebase. Your old hosting bill stops.'],
 ]
 
 export default function Services() {

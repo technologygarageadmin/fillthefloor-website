@@ -3,7 +3,7 @@
   padding: clamp(56px, 8vw, 96px) clamp(16px, 4vw, 48px);
   background: #fdfcff;
 }
-.orb2 { position: absolute; right: -160px; bottom: 8%; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(124,58,237,.14), rgba(236,47,122,.08) 55%, transparent 72%); pointer-events: none; }
+.orb2 { position: absolute; right: -160px; bottom: 8%; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(124,58,237,.14), rgba(59,107,255,.08) 55%, transparent 72%); pointer-events: none; }
 .tiers-inner { position: relative; max-width: 1240px; margin: 0 auto; }
 
 .tiers-head { display: grid; grid-template-columns: 1fr minmax(0, 560px) 1fr; align-items: start; text-align: center; margin-bottom: 64px; }
@@ -25,7 +25,7 @@
   outline: none;
 }
 .tier.blue { --tone: var(--blue); --soft: #e3ecfe; }
-.tier.pink { --tone: var(--pink); --soft: #fde4ee; }
+.tier.pink { --tone: var(--teal); --soft: #d8f4f8; }
 .tier.violet { --tone: var(--purple); --soft: #ece7fd; }
 .tier.orange { --tone: var(--orange); --soft: #ffeadb; }
 
@@ -37,7 +37,7 @@
 .tier::after { content: ''; position: absolute; inset: 0; z-index: -1; border-radius: 26px; background: #fff; }
 .tier:hover, .tier:focus-within, .tier:focus-visible {
   transform: translateY(-10px);
-  box-shadow: 0 32px 60px -22px rgba(236,47,122,.5);
+  box-shadow: 0 32px 60px -22px rgba(59,107,255,.5);
 }
 .tier:hover::before, .tier:focus-within::before, .tier:focus-visible::before { opacity: 1; }
 
@@ -61,7 +61,7 @@
 }
 .tier:hover .t-btn, .tier:focus-within .t-btn {
   color: #fff; border-color: transparent; background: var(--grad); background-origin: border-box; background-clip: border-box;
-  box-shadow: 0 12px 24px -10px rgba(236,47,122,.6);
+  box-shadow: 0 12px 24px -10px rgba(59,107,255,.6);
 }
 
 .tiers-inner .note { text-align: center; max-width: 640px; margin-inline: auto; }

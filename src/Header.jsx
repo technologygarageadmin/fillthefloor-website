@@ -3,16 +3,16 @@ import { Icon } from './Hero.jsx'
 import './header.css'
 
 const services = [
-  ['browser', 'Website & hosting'], ['search', 'SEO / AEO'], ['users', 'Social content'],
-  ['megaphone', 'Paid advertising'], ['pin', 'Google Business Profile'], ['bars', 'Market analytics'],
+  ['users', 'Creative content'], ['megaphone', 'Paid advertising'], ['search', 'SEO / AEO'],
+  ['pin', 'Google Business Profile'], ['bars', 'Market analytics'], ['browser', 'Website & hosting'],
 ]
 
 // [label, href, section ids that keep this link highlighted]
 const links = [
   ['Home', '#top', ['top']],
   ['Services', '#services', ['services']],
+  ['Our Process', '#process', ['process', 'showcase']],
   ['Tiers', '#tiers', ['tiers', 'compare']],
-  ['Our Process', '#process', ['process']],
   ['Results', '#expect', ['expect']],
   ['Contact', '#contact', ['contact']],
 ]
@@ -22,7 +22,7 @@ export default function Header({ mail }) {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const ids = ['services', 'tiers', 'compare', 'process', 'expect', 'contact']
+    const ids = ['services', 'process', 'showcase', 'tiers', 'compare', 'expect', 'contact']
     let raf = 0
     const update = () => {
       raf = 0

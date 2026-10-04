@@ -5,12 +5,12 @@
 }
 .svc-inner { position: relative; max-width: 1180px; margin: 0 auto; }
 .orb { position: absolute; border-radius: 50%; filter: blur(8px); pointer-events: none; }
-.orb-l { width: 260px; height: 260px; left: -90px; top: 38%; background: radial-gradient(circle, rgba(236,47,122,.18), transparent 70%); }
-.orb-r { width: 380px; height: 380px; right: -140px; bottom: 6%; background: radial-gradient(circle, rgba(249,115,22,.22), rgba(236,47,122,.1) 55%, transparent 72%); }
-.plane2 { position: absolute; right: 2%; top: 50%; width: 40px; fill: var(--pink); transform: rotate(-8deg); opacity: .9; }
+.orb-l { width: 260px; height: 260px; left: -90px; top: 38%; background: radial-gradient(circle, rgba(59,107,255,.18), transparent 70%); }
+.orb-r { width: 380px; height: 380px; right: -140px; bottom: 6%; background: radial-gradient(circle, rgba(18,181,203,.22), rgba(59,107,255,.1) 55%, transparent 72%); }
+.plane2 { position: absolute; right: 2%; top: 50%; width: 40px; fill: var(--accent); transform: rotate(-8deg); opacity: .9; }
 .spark { position: absolute; width: 22px; height: 3px; border-radius: 3px; background: var(--orange); transform: rotate(-60deg); }
 .spark.s1 { left: 5%; bottom: 8%; }
-.spark.s2 { left: 6.5%; bottom: 5%; transform: rotate(-110deg); background: var(--pink); }
+.spark.s2 { left: 6.5%; bottom: 5%; transform: rotate(-110deg); background: var(--accent); }
 
 .svc-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; margin-bottom: 56px; }
 .svc-head h2 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.04; max-width: 640px; }
@@ -35,7 +35,7 @@
   transition: transform .2s, box-shadow .2s;
 }
 .svc-card:hover { transform: translateY(-5px); box-shadow: 0 26px 46px -20px rgba(124,58,237,.38); }
-.svc-card.pink { --tone: var(--pink); --soft: #fde4ee; }
+.svc-card.pink { --tone: var(--teal); --soft: #d8f4f8; }
 .svc-card.orange { --tone: var(--orange); --soft: #ffeadb; }
 .svc-card.blue { --tone: var(--blue); --soft: #e3ecfe; }
 .svc-card.green { --tone: #10b981; --soft: #d9f7e7; }

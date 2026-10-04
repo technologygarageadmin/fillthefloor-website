@@ -1,6 +1,7 @@
 import Hero from './Hero.jsx'
 import Header from './Header.jsx'
 import Services from './Services.jsx'
+import Spiral from './Spiral.jsx'
 import Tiers from './Tiers.jsx'
 import Compare from './Compare.jsx'
 import Process from './Process.jsx'
@@ -21,10 +22,13 @@ export default function App() {
 
         <Services />
 
+        <Process mail={MAIL} />
+
+        <Spiral />
+
+
         <Tiers mail={MAIL} />
         <Compare />
-
-        <Process mail={MAIL} />
 
         <Expect mail={MAIL} />
 

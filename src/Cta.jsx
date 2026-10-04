@@ -10,12 +10,12 @@ const features = [
 // [icon, label, sub, angle around the ring (deg, 0 = right), colour]
 const orbit = [
   ['file', 'Plan', 'Strategy & calendar', -90, '#7c3aed'],
-  ['play', 'Create', 'Content & creatives', -18, '#ec2f7a'],
+  ['play', 'Create', 'Content & creatives', -18, '#06b6d4'],
   ['target', 'Reach', 'Ads & distribution', 54, '#f97316'],
   ['bars', 'Measure', 'Reports & insights', 126, '#2563eb'],
   ['trend', 'Grow', 'More customers', 198, '#10b981'],
 ]
-const arrowColors = ['#d946ef', '#f43f5e', '#fb923c', '#a855f7', '#8b5cf6']
+const arrowColors = ['#7c5cff', '#3b6bff', '#fb923c', '#7c5cff', '#8b5cf6']
 
 const point = (deg, r = 38) => {
   const a = (deg * Math.PI) / 180
@@ -40,8 +40,8 @@ const arcs = orbit.map(([, , , a], i) => {
 })
 
 const footCols = [
-  ['Services', [['Website & Hosting', '#services'], ['SEO / AEO', '#services'], ['Social Content', '#services'],
-    ['Paid Advertising', '#services'], ['Google Business Profile', '#services'], ['Market Analytics', '#services']]],
+  ['Services', [['Creative Content', '#services'], ['Paid Advertising', '#services'], ['SEO / AEO', '#services'],
+    ['Google Business Profile', '#services'], ['Market Analytics', '#services'], ['Website & Hosting', '#services']]],
   ['Tiers', [['The Baseline', '#tiers'], ['The Growth Vector', '#tiers'], ['The Premium Offering', '#tiers'], ['Infinite Scale', '#tiers']]],
   ['Explore', [['Compare tiers', '#compare'], ['Our process', '#process'], ['What to expect', '#expect'], ['Contact', '#contact']]],
 ]

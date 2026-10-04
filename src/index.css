@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600&family=Monoton&display=swap');
 
 :root {
   --navy: #0b1730;
@@ -8,10 +8,11 @@
   --bg: #ffffff;
   --tint: #f5f6fb;
   --blue: #2563eb;
-  --purple: #7c3aed;
-  --pink: #ec2f7a;
+  --purple: #6d4aff;
+  --accent: #3b6bff;
+  --teal: #12b5cb;
   --orange: #f97316;
-  --grad: linear-gradient(110deg, var(--purple), var(--pink) 50%, var(--orange));
+  --grad: linear-gradient(110deg, var(--purple), var(--accent) 50%, var(--teal));
   --r: 18px;
 }
 
@@ -107,12 +108,12 @@ tbody tr:nth-child(even) { background: #fafbff; }
 .svc-inner, .tiers-inner, .cmp-inner, .proc-inner, .ex-inner { z-index: 1; }
 
 /* Gradient scrollbar */
-html { scrollbar-width: thin; scrollbar-color: #ec2f7a #f3effc; }
+html { scrollbar-width: thin; scrollbar-color: #3b6bff #f3effc; }
 ::-webkit-scrollbar { width: 12px; height: 12px; }
 ::-webkit-scrollbar-track { background: #f3effc; }
 ::-webkit-scrollbar-thumb {
   border-radius: 999px; border: 3px solid #f3effc;
-  background: linear-gradient(180deg, #7c3aed, #ec2f7a 55%, #f97316);
+  background: linear-gradient(180deg, #7c3aed, #3b6bff 55%, #12b5cb);
 }
-::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #6d28d9, #db2777 55%, #ea580c); }
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #6d28d9, #2f55e6 55%, #ea580c); }
 ::-webkit-scrollbar-corner { background: #f3effc; }
