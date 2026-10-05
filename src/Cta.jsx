@@ -1,4 +1,5 @@
 import { Icon } from './Hero.jsx'
+import AnimatedLogo from './AnimatedLogo.jsx'
 import './cta.css'
 
 const features = [
@@ -81,7 +82,7 @@ export function Cta({ mail, email }) {
                 </g>
               ))}
             </svg>
-            <img className="orbit-logo" src="/logo-mark.png" alt="" />
+            <AnimatedLogo className="orbit-logo" />
             {orbit.map(([icon, t, d, a, color], n) => {
               const [x, y] = point(a)
               return (
@@ -103,7 +104,7 @@ export function Footer({ mail, email }) {
     <footer className="site-foot">
       <div className="foot-grid">
         <div className="foot-brand">
-          <img src="/logo-mark.png" alt="FillTheFloor" />
+          <AnimatedLogo label="FillTheFloor" />
           <p>An all-in-one marketing back office for cafés, salons, boutiques, clinics, trades and home services.</p>
         </div>
         {footCols.map(([title, links]) => (

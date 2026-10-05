@@ -55,7 +55,16 @@
 @media (max-width: 860px) { .svc-note { display: none; } }
 @media (max-width: 640px) {
   .svc-grid { grid-template-columns: 1fr; }
-  .svc-ico { width: 60px; height: 60px; border-radius: 18px; }
+  .svc-head { margin-bottom: 24px; }
+  .svc-grid { gap: 10px; }
+  .svc-card { gap: 12px; padding: 14px; border-radius: 18px; align-items: center; }
+  .svc-ico { width: 44px; height: 44px; border-radius: 13px; }
+  .svc-ico svg { width: 22px; height: 22px; }
+  .svc-body { padding-right: 0; }
+  .svc-num { display: none; }
+  .svc-body h3 { font-size: 1rem; margin: 0 0 3px; }
+  .svc-body p { font-size: .8rem; line-height: 1.4; }
+  .svc-go { display: none; }
   .plane2, .spark { display: none; }
 }
 

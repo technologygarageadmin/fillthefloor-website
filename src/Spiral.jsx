@@ -51,8 +51,8 @@ export default function Spiral() {
 
       /* ---------- scene ---------- */
       const cfg = { imageHeight: 7, spiralRadius: 3.5, spiralTurns: 2.2, spiralHeight: 9.2 }
-      const widthOf = () => stage.clientWidth
-      const heightOf = () => stage.clientHeight
+      const widthOf = () => canvas.clientWidth
+      const heightOf = () => canvas.clientHeight
 
       const renderer = new THREE.WebGLRenderer({ canvas, antialias: true })
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
@@ -140,9 +140,10 @@ export default function Spiral() {
       let targetNdcX = 0
       const applyView = () => camera.setViewOffset(widthOf(), heightOf(), -viewX, -viewY, widthOf(), heightOf())
       const layout = () => {
-        const wide = widthOf() >= 1000
+        const sw = stage.clientWidth
+        const wide = sw >= 1000
         stage.classList.toggle('compact', !wide)
-        camera.zoom = wide ? 0.82 : 1
+        camera.zoom = wide ? 0.82 : sw >= 600 ? 0.8 : 0.62
         targetNdcX = wide ? 0.24 : 0     // room for the caption on the left
         camera.aspect = widthOf() / heightOf()
         renderer.setSize(widthOf(), heightOf(), false)
@@ -219,10 +220,27 @@ export default function Spiral() {
       const touchOnly = window.matchMedia('(hover: none)').matches
       const drift = touchOnly && !still
 
+      let visible = true
+      // touch: swipe sideways on the spiral to spin it (page scrolling leaves it alone)
+      let touch = null
+      const onTouchStart = (e) => { const t = e.touches[0]; touch = { x: t.clientX, y: t.clientY } }
+      const onTouchMove = (e) => {
+        if (!touch) return
+        const t = e.touches[0]
+        const dx = t.clientX - touch.x
+        if (Math.abs(dx) > Math.abs(t.clientY - touch.y)) target -= dx * 0.0016
+        touch = { x: t.clientX, y: t.clientY }
+      }
+      const onTouchEnd = () => { touch = null }
+      if (touchOnly) {
+        stage.addEventListener('touchstart', onTouchStart, { passive: true })
+        stage.addEventListener('touchmove', onTouchMove, { passive: true })
+        stage.addEventListener('touchend', onTouchEnd)
+      }
+
       const ro = new ResizeObserver(layout)
       ro.observe(stage)
 
-      let visible = true
       const io = new IntersectionObserver(([e]) => { visible = e.isIntersecting }, { rootMargin: '100px' })
       io.observe(stage)
 
@@ -247,6 +265,9 @@ export default function Spiral() {
         stage.removeEventListener('mousedown', onDown)
         window.removeEventListener('mousemove', onMove)
         window.removeEventListener('mouseup', onUp)
+        stage.removeEventListener('touchstart', onTouchStart)
+        stage.removeEventListener('touchmove', onTouchMove)
+        stage.removeEventListener('touchend', onTouchEnd)
         geometry.dispose()
         material.dispose()
         texture.dispose()
@@ -270,7 +291,7 @@ export default function Spiral() {
       <header className="spiral-head">
         <p className="eyebrow">Our services in action</p>
         <h2>See what we <span className="grad-text">deliver</span></h2>
-        <p className="sub">A look at the work behind each service. Scroll with your cursor over the spiral to explore.</p>
+        <p className="sub">A look at the work behind each service. Scroll with your cursor over the spiral, or swipe it sideways on touch, to explore.</p>
       </header>
 
       <div className="spiral-stage" ref={stageRef}>

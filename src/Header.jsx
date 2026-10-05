@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Icon } from './Hero.jsx'
+import AnimatedLogo from './AnimatedLogo.jsx'
 import './header.css'
 
 const services = [
@@ -44,7 +45,7 @@ export default function Header({ mail }) {
   return (
     <header className="site-nav">
       <a href="#top" className="brand" aria-label="FillTheFloor home" onClick={close}>
-        <img src="/logo-mark.png" alt="FillTheFloor" />
+        <AnimatedLogo label="FillTheFloor" />
       </a>
 
       <nav id="main-nav" className={open ? 'open' : ''} aria-label="Main">

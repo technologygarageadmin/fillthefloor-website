@@ -8,10 +8,12 @@
 .spiral-stage {
   position: relative; max-width: 1240px; height: min(80vh, 720px); margin: 0 auto; overflow: hidden;
   border-radius: 28px; background: #fdfcff; touch-action: pan-y;
+}
+.spiral-stage canvas {
+  position: absolute; inset: 0; width: 100%; height: 100%; display: block;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 12%, #000 88%, transparent 100%);
   mask-image: linear-gradient(to bottom, transparent 0, #000 12%, #000 88%, transparent 100%);
 }
-.spiral-stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .spiral-loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-size: .9rem; }
 
 .spiral-cap {
@@ -28,7 +30,9 @@
 .spiral-cap p { font-size: .95rem; line-height: 1.55; color: var(--muted); }
 
 /* container narrower than ~1000px: caption becomes a small card at the bottom */
-.spiral-stage.compact .spiral-cap { left: 50%; top: auto; bottom: 16%; width: min(90%, 420px); text-align: center; transform: translateX(-50%); padding: 12px 16px; border-radius: 14px; background: rgba(255,255,255,.88); backdrop-filter: blur(6px); }
+.spiral-stage.compact { height: min(78vh, 700px); }
+.spiral-stage.compact canvas { bottom: 170px; height: auto; }
+.spiral-stage.compact .spiral-cap { left: 50%; top: auto; bottom: 10px; width: min(90%, 420px); text-align: center; transform: translateX(-50%); padding: 12px 16px; border-radius: 14px; background: #fff; box-shadow: 0 6px 24px rgba(11,23,48,.08); }
 .spiral-stage.compact .spiral-cap.swap { transform: translateX(-50%) translateY(12px); }
 .spiral-stage.compact .sc-count { font-size: 1.6rem; }
 .spiral-stage.compact .sc-bar { margin: 8px auto; }
